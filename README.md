@@ -1,1 +1,5 @@
-Starter App for a quick overview of Redux
+Simple React Todo App
+
+clone
+npm install
+npm run serve

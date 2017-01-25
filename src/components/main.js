@@ -19,9 +19,7 @@ export default class MainView extends React.Component {
   }
 
   updateTodo(updatedTodo, index) {
-    const todos = this.state.todos.map((todo, i) => {
-      return i === index ? updatedTodo : todo
-    })
+    const todos = this.state.todos.map((todo, i) => (i === index ? updatedTodo : todo))
 
     this.setState({ todos })
   }
@@ -37,7 +35,11 @@ export default class MainView extends React.Component {
       <main>
         <h1>Another Stupid TODO app</h1>
         <NewTodo addTodo={this.addTodo} />
-        <TodoList updateTodo={this.updateTodo} deleteTodo={this.deleteTodo} todos={this.state.todos} />
+        <TodoList
+          updateTodo={this.updateTodo}
+          deleteTodo={this.deleteTodo}
+          todos={this.state.todos}
+        />
       </main>
     )
   }
