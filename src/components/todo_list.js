@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 
 import Todo from './todo'
 
@@ -13,8 +13,21 @@ export default class TodoList extends React.Component {
     const { todos, updateTodo, deleteTodo } = this.props
     return (
       <ul>
-        {todos.map((todo, i) => <Todo updateTodo={updateTodo} deleteTodo={deleteTodo} idx={i} todo={todo} key={todoId++}></Todo>)}
+        {todos.map((todo, i) => (
+          <Todo
+            updateTodo={updateTodo}
+            deleteTodo={deleteTodo}
+            idx={i}
+            todo={todo}
+            key={todoId++}
+          />))}
       </ul>
     )
   }
+}
+
+TodoList.propTypes = {
+  updateTodo: PropTypes.func.isRequired,
+  deleteTodo: PropTypes.func.isRequired,
+  todos: PropTypes.arrayOf(PropTypes.string).isRequired
 }
