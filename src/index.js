@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 
 import MainView from './components/main'
 
-import './style.css'
+import './style/main.scss'
 
 const reactNode = document.createElement('div')
 document.body.insertBefore(reactNode, document.body.firstChild)

@@ -1,0 +1,96 @@
+@import 'reset';
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Playfair+Display');
+
+$header-font: 'Josefin Sans', sans-serif;
+$body-font: 'Playfair Display', serif;
+
+body {
+  font-family: $body-font;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $header-font;
+  text-align: center;
+}
+
+h1 {
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+main {
+  width: 600px;
+  min-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+
+  input, button {
+    border: none;
+  }
+
+  input[type=text] {
+    border-bottom: 1px solid black;
+    height: 25px;
+    outline: none;
+    font-family: $body-font;
+    font-size: 15px;
+    text-align: center;
+    transition: 300ms;
+
+    &:focus {
+      border-bottom: 2px solid #2a2;
+    }
+  }
+
+  input[type=submit], button {
+    border-radius: 10px;
+    background-color: #ccc;
+    cursor: pointer;
+    font-family: $header-font;
+    font-size: 20px;
+    padding: 5px 20px;
+    transition: 300ms;
+  }
+
+  input[type=submit]:hover {
+    background-color: #3a3;
+  }
+
+  button:hover {
+    background-color: #a33;
+  }
+
+  > form {
+    margin-bottom: 15px;
+    input[type="text"] {
+      width: 70%;
+      margin-right: 2%;
+    }
+    input[type="submit"] {
+      width: 25%;
+    }
+  }
+
+  ul li {
+    margin-bottom: 25px;
+
+    span {
+      text-align: center;
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    form {
+      input {
+        margin-right: 1%;
+      }
+      input[type=text] {
+        width: 60%;
+      }
+
+      input[type=submit], button {
+        width: 18%;
+      }
+    }
+  }
+}
