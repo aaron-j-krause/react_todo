@@ -26,11 +26,11 @@ export default class Todo extends React.Component {
   render() {
     return (
       <li>
-        <span>{this.props.todo}</span>
+        <p>{this.props.todo}</p>
         <form onSubmit={this.handleSubmit}>
           <input type="text" name="todoBody"/>
-          <input type="submit" value="Update"/>
-          <button onClick={this.handleClick}>Delete</button>
+          <button type="submit" value="Update">Update</button>
+          <button name="delete" onClick={this.handleClick}>Delete</button>
         </form>
       </li>
 

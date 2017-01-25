@@ -42,7 +42,7 @@ main {
     }
   }
 
-  input[type=submit], button {
+  button {
     border-radius: 10px;
     background-color: #ccc;
     cursor: pointer;
@@ -50,23 +50,25 @@ main {
     font-size: 20px;
     padding: 5px 20px;
     transition: 300ms;
+
+    &[type=submit]:hover {
+      background-color: #3a3;
+    }
+
+    &[name=delete]:hover {
+      background-color: #a33;
+    }
   }
 
-  input[type=submit]:hover {
-    background-color: #3a3;
-  }
-
-  button:hover {
-    background-color: #a33;
-  }
 
   > form {
     margin-bottom: 15px;
+
     input[type="text"] {
       width: 70%;
       margin-right: 2%;
     }
-    input[type="submit"] {
+    button[type="submit"] {
       width: 25%;
     }
   }
@@ -74,21 +76,20 @@ main {
   ul li {
     margin-bottom: 25px;
 
-    span {
+    p {
       text-align: center;
-      display: block;
       margin-bottom: 20px;
     }
 
     form {
-      input {
+      input, button[type=submit] {
         margin-right: 1%;
       }
       input[type=text] {
         width: 60%;
       }
 
-      input[type=submit], button {
+      button[type=submit], button[name=delete] {
         width: 18%;
       }
     }
