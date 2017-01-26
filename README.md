@@ -1,5 +1,3 @@
 Simple React Todo App
 
-clone
-npm install
-npm run serve
+run the dev server with `npm run serve`
