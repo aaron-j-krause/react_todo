@@ -51,11 +51,11 @@ main {
     padding: 5px 20px;
     transition: 300ms;
 
-    &[type=submit]:hover {
+    &[type="submit"]:hover {
       background-color: #3a3;
     }
 
-    &[name=delete]:hover {
+    &[name="delete"]:hover {
       background-color: #a33;
     }
   }
